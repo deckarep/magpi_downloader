@@ -13,5 +13,5 @@ virtualenv venv
 source venv/bin/activate
 pip install -r pip.install.lock
 
-python magpi_downloader.py | xargs -n1 -P10 -I% sh -c 'result=`echo % | rev | cut -d"/" -f1 | rev` && wget -c % -O magazines/$result'
+./go.sh
 ```
